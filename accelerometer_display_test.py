@@ -59,25 +59,25 @@ while True:
     if accY < 3 and abs(accX) < 3:
         if last_accY >= 3:
             splash.pop(0)
-            splash.append(rightarrow_area)
+            splash.append(uparrow_area)
             display.show(splash)
 
     if accY >= 3 and abs(accX) < 3:
         if last_accY < 3:
             splash.pop(0)
-            splash.append(leftarrow_area)
-            display.show(splash)
-
-    if accX >= 3 and abs(accY) < 3:
-        if last_accX < 3:
-            splash.pop(0)
-            splash.append(uparrow_area)
-            display.show(splash)
-
-    if accX < 3 and abs(accY) < 3:
-        if last_accX >= 3:
-            splash.pop(0)
             splash.append(downarrow_area)
+            display.show(splash)
+
+    if accX >= 5:
+        if last_accX < 5:
+            splash.pop(0)
+            splash.append(rightarrow_area)
+            display.show(splash)
+
+    if accX < -5:
+        if last_accX >= -5:
+            splash.pop(0)
+            splash.append(leftarrow_area)
             display.show(splash)
 
     last_accX = accX
